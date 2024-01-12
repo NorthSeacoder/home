@@ -7,11 +7,8 @@
                 find me in:
             </span>
             <div id="social-icons" class="flex">
-                <NuxtLink :to="social.twitter.url + social.twitter.user" target="_blank" class="flex justify-center items-center">
-                    <img src="/icons/social/twitter.svg"/>
-                </NuxtLink>
-                <NuxtLink :to="social.facebook.url + social.facebook.user" target="_blank" class="flex justify-center items-center">
-                    <img src="/icons/social/facebook.svg"/>
+                <NuxtLink :to="social.juejin.url" target="_blank" class="flex justify-center items-center">
+                    <img :src="social.juejin.icon"/>
                 </NuxtLink>
                 <NuxtLink :to="social.github.url + social.github.user" target="_blank" class="flex md:hidden justify-center items-center">
                 <img src="/icons/social/github.svg"/>
@@ -26,6 +23,7 @@
         </NuxtLink>
 
     </footer>
+    <a class="absolute bottom-2 text-menu-text w-full text-xs text-center" href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024042617号-1</a>
 </template>
 
 <style>

@@ -1,6 +1,6 @@
 {
-    "name": "Micheal Weaver",
-    "logo_name": "micheal-weaver",
+    "name": "Pane Meng",
+    "logo_name": "northseacoder",
     "role": "Front-end developer",
     "about": {
         "sections": {
@@ -25,7 +25,7 @@
             "personal-info": {
                 "title": "personal-info",
                 "icon": "icons/info-personal.svg",
-                "info": { 
+                "info": {
                     "bio": {
                         "title": "bio",
                         "description": "<br> About me <br> I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat  nulla pariatur. Excepteur sint occaecat  officia deserunt mollit anim id est laborum."
@@ -64,56 +64,47 @@
         "direct": {
             "title": "contacts",
             "sources": {
-                "email": "user@gmail.com",
-                "phone": "+3598246359"
+                "email": "646388689@qq.com",
+                "phone": "+86 18505280124"
             }
         },
         "social": {
+            "juejin":{
+                "title": "掘金",
+                "url": "https://juejin.cn/user/2101921962025421",
+                "icon":"icons/social/juejin.svg"
+            },
             "github": {
                 "title": "Github profile",
                 "url": "https://github.com/",
-                "user": "username"
-            },
-            "facebook": {
-                "title": "Facebook profile",
-                "url": "https://facebook.com/",
-                "user": "username"
+                "user": "northseacoder"
             },
             "twitter": {
                 "title": "Twitter account",
-                "url": "https://twitter.com/",
-                "user": "username"
+                "url": "https://twitter.com/noethseacoder",
+                "icon":"icons/social/twitter.svg"
             }
         },
         "find_me_also_in": {
             "title": "find-me-also-in",
-            "sources": {
-                "youtube": {
-                    "title": "YouTube channel",
-                    "url": "https://www.youtube.com/",
-                    "user": "username"
+            "sources": [
+                {
+                    "title":"掘金",
+                    "key": "juejin",
+                    "url": "https://juejin.cn/user/2101921962025421",
+                    "icon":"icons/social/juejin.svg"
                 },
-                "gurushots": {
-                    "title": "GuruShots profile",
-                    "url": "https://gurushots.com/",
-                    "user": "username"
-                },
-                "instagram": {
-                    "title": "Instagram account",
-                    "url": "https://instagram.com/",
-                    "user": "username"
-                },
-                "twitch": {
-                    "title": "Twitch profile",
-                    "url": "https://twitch.com/",
-                    "user": "username"
+                {
+                    "title":"B 站",
+                    "key": "bilibili",
+                    "url": "https://space.bilibili.com/60474929",
+                    "icon":"icons/social/bilibili.svg"
                 }
-            }
+            ]
         }
     },
     "gists": {
-        "1": "83861a67e377633ee8368df01ee3a355",
-        "2": "694c1f32332788a2ac7f37b09e5aa40e"
+        "1": "16a1bb4c691a98eaf70bca195543ea01"
     },
     "projects": {
         "1": {
