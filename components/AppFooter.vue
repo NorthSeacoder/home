@@ -8,26 +8,47 @@
             </span>
             <div id="social-icons" class="flex">
                 <NuxtLink :to="social.juejin.url" target="_blank" class="flex justify-center items-center">
-                    <img :src="social.juejin.icon"/>
+                    <img :src="social.juejin.icon" />
                 </NuxtLink>
-                <NuxtLink :to="social.github.url + social.github.user" target="_blank" class="flex md:hidden justify-center items-center">
-                <img src="/icons/social/github.svg"/>
-            </NuxtLink>
+                <NuxtLink :to="social.github.url + social.github.user" target="_blank"
+                          class="flex md:hidden justify-center items-center">
+                    <img src="/icons/social/github.svg" />
+                </NuxtLink>
             </div>
         </div>
 
         <!-- github user -->
-        <NuxtLink :to="social.github.url + social.github.user" target="_blank" class="hidden md:flex items-center px-5 border-left">
+        <NuxtLink :to="social.github.url + social.github.user" target="_blank"
+                  class="hidden md:flex items-center px-5 border-left">
             @{{ social.github.user }}
-            <img src="/icons/social/github.svg"/>
+            <img src="/icons/social/github.svg" />
         </NuxtLink>
 
     </footer>
-    <a class="absolute bottom-2 text-menu-text w-full text-xs text-center" href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024042617号-1</a>
+    <a class="absolute bottom-2 text-menu-text w-full text-xs text-center" href="https://beian.miit.gov.cn/"
+       target="_blank">京ICP备2024042617号-1</a>
 </template>
 
-<style>
+<script lang="ts">
+import { defineComponent, reactive, onMounted } from 'vue';
 
+export default defineComponent({
+    name: 'AppFooter',
+    setup() {
+        const config = useRuntimeConfig();
+        const social = reactive(config.dev.contacts.social); // Replace with your social links data
+
+        onMounted(() => {
+            // Any onMounted logic here
+        });
+
+        return {
+            social
+        }
+    },
+});
+</script>
+<style>
 footer {
     height: 40px;
     min-height: 40px;
@@ -38,26 +59,31 @@ footer a:hover {
     background-color: #1e2d3d74;
 }
 
-#social-icons > a {
+#social-icons>a {
     border-right: 1px solid #1E2D3D;
     height: 100%;
     width: 50px;
- }
+}
 
-#social-icons > a > img {
-    width: 1.25rem; /* 20px */
-    height: 1.25rem; /* 20px */
+#social-icons>a>img {
+    width: 1.25rem;
+    /* 20px */
+    height: 1.25rem;
+    /* 20px */
     margin: auto;
     opacity: 0.4;
 }
 
-footer > a > img {
-    width: 1.25rem; /* 20px */
-    height: 1.25rem; /* 20px */
-    margin-left: 0.5rem; /* 8px */
-  }
+footer>a>img {
+    width: 1.25rem;
+    /* 20px */
+    height: 1.25rem;
+    /* 20px */
+    margin-left: 0.5rem;
+    /* 8px */
+}
 
-#social-icons > a:hover img {
+#social-icons>a:hover img {
     opacity: 1;
 }
 
@@ -67,31 +93,15 @@ footer > a > img {
         border-right: none;
     }
 
-    #social-icons > a {
+    #social-icons>a {
         border-right: none;
         border-left: 1px solid #1E2D3D;
     }
 
-    #social-icons > a > img {
-        width: 1.5rem; /* 20px */
-        height: 1.5rem; /* 20px */
-  }
-}
-
-</style>
-
-<script>
-export default {
-    name: 'AppFooter',
-    data() {
-        return {
-          route: this.$route.path,
-        }
-    },
-    setup() {
-        return {
-            social: useRuntimeConfig().dev.contacts.social
-        }
-    },
-}
-</script>
+    #social-icons>a>img {
+        width: 1.5rem;
+        /* 20px */
+        height: 1.5rem;
+        /* 20px */
+    }
+}</style>

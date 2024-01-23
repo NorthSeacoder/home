@@ -25,7 +25,7 @@ module.exports = {
                 'greenfy': '#43D9AD',
                 'bluefy-dark': '#011627',
                 'purplefy': '#5565E8',
-
+                'ocean':'#1E2D3D'
             }
         },
         fontFamily: {
