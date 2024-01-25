@@ -1,4 +1,4 @@
-const config = require('./developer.json')
+import config from './developer';
 const webName = '不辞东流'
 const siteTitle = `${config.name} | ${config.role}`
 
@@ -63,7 +63,6 @@ export default defineNuxtConfig({
     cssPath: '~/assets/tailwind.css',
     configPath: 'tailwind.config',
     exposeConfig: true, // true to resolve the tailwind config in runtime. https://tailwindcss.nuxt.dev/getting-started/options/#exposeconfig
-    injectPosition: 0,
     viewer: false,
   },
 
