@@ -33,10 +33,10 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#010C15' },
         // ...
       ],
-      link: [
-        { rel: 'manifest', href: 'pwa/manifest.json' },
-        { rel: 'apple-touch-icon', href: 'pwa/icons/apple-touch-icon.png' },
-      ],
+      // link: [
+      //   { rel: 'manifest', href: 'pwa/manifest.json' },
+      //   { rel: 'apple-touch-icon', href: 'pwa/icons/apple-touch-icon.png' },
+      // ],
     },
   },
 
