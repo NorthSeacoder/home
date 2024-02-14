@@ -4,29 +4,33 @@
     <!-- header -->
     <div id="mobile-header" class="w-full h-16 flex justify-between items-center">
       <NuxtLink class="text-menu-text font-fira_retina flex h-full items-center mx-5" to="/" @click="goHome()">
-        {{ config.dev.logo_name }}
+        {{ config.logo_name }}
       </NuxtLink>
-      <img src="/icons/burger.svg" v-if="!menuOpen" @click="toggleMobileMenu()" class="w-5 h-5 mx-5 my-auto"/>
-      <img src="/icons/burger-close.svg" v-else @click="toggleMobileMenu()" name="icon-park-outline:close" class="w-5 h-5 mx-5 my-auto"/>
+      <img src="/icons/burger.svg" v-if="!menuOpen" @click="toggleMobileMenu()" class="w-5 h-5 mx-5 my-auto" />
+      <img src="/icons/burger-close.svg" v-else @click="toggleMobileMenu()" name="icon-park-outline:close"
+           class="w-5 h-5 mx-5 my-auto" />
     </div>
 
     <!-- mobile menu -->
-      <div id="menu" class="bg-mobile-menu-blue z-10 hidden">
-        <NuxtLink id="nav-link-mobile" to="/" :class="{ active: isActive('/') }" @click="toggleMobileMenu()">
-          _hello
-        </NuxtLink>
-  
-        <NuxtLink id="nav-link-mobile" to="/about-me" :class="{ active: isActive('/about-me') }" @click="toggleMobileMenu()">
-          _about-me
-        </NuxtLink>
-  
-        <NuxtLink id="nav-link-mobile" to="/projects" :class="{ active: isActive('/projects') }" @click="toggleMobileMenu()">
-          _projects
-        </NuxtLink>
+    <div id="menu" class="bg-mobile-menu-blue z-10 hidden">
+      <NuxtLink id="nav-link-mobile" to="/" :class="{ active: isActive('/') }" @click="toggleMobileMenu()">
+        _hello
+      </NuxtLink>
 
-        <NuxtLink id="nav-link-mobile" to="/contact-me" :class="{ active: isActive('/contact-me') }" @click="toggleMobileMenu()">
-          _contact-me
-        </NuxtLink>
+      <NuxtLink id="nav-link-mobile" to="/about-me" :class="{ active: isActive('/about-me') }"
+                @click="toggleMobileMenu()">
+        _about-me
+      </NuxtLink>
+
+      <NuxtLink id="nav-link-mobile" to="/projects" :class="{ active: isActive('/projects') }"
+                @click="toggleMobileMenu()">
+        _projects
+      </NuxtLink>
+
+      <NuxtLink id="nav-link-mobile" to="/contact-me" :class="{ active: isActive('/contact-me') }"
+                @click="toggleMobileMenu()">
+        _contact-me
+      </NuxtLink>
     </div>
 
   </div>
@@ -34,20 +38,20 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       menuOpen: false
     }
   },
   setup() {
-    const config = useRuntimeConfig()
-
+    const runtimeConfig = useRuntimeConfig();
+    const config = runtimeConfig.public.config;
     return {
       config
     }
   },
   methods: {
-    toggleMobileMenu(){
+    toggleMobileMenu() {
 
       this.menuOpen ? this.menuOpen = false : this.menuOpen = true
 
@@ -64,7 +68,7 @@ export default {
     },
     goHome() {
       const menu = document.getElementById('menu');
-      if(!menu.classList.contains('hidden')){
+      if (!menu.classList.contains('hidden')) {
         menu.classList.toggle('hidden')
         document.getElementsByTagName('main')[0].style.display = 'flex';
         this.menuOpen ? this.menuOpen = false : this.menuOpen = true
@@ -81,7 +85,6 @@ export default {
 </script>
 
 <style>
-
 #mobile-header {
   border-bottom: 1px solid #1E2D3D;
 }
@@ -94,5 +97,4 @@ export default {
 #nav-link-mobile.active {
   color: white
 }
-
 </style>

@@ -11,8 +11,8 @@
 				<span>
 					Hi all, I am
 				</span>
-				<h1>{{ config.dev.name }}</h1>
-				<h2>> {{ config.dev.role }}</h2>
+				<h1>{{ config.name }}</h1>
+				<h2>> {{ config.role }}</h2>
 			</div>
 
 			<div id="info">
@@ -35,8 +35,8 @@
 					<span class="operator">
 						=
 					</span>
-					<a class="string" :href="'https://github.com/' + config.public.dev.contacts.social.github.user">
-						"https://github.com/{{ config.public.dev.contacts.social.github.user }}"
+					<a class="string" :href="'https://github.com/' + config.contacts.social.github.user">
+						"https://github.com/{{ config.contacts.social.github.user }}"
 					</a>
 				</p>
 			</div>
@@ -286,7 +286,8 @@
 export default {
   name: 'Hello',
   setup() {
-    const config = useRuntimeConfig()
+    const  runtimeConfig  = useRuntimeConfig();
+        const config = runtimeConfig.public.config;
     return {
       config
     }

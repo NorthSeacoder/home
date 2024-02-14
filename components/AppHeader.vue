@@ -3,8 +3,9 @@
     <nav class="w-full flex justify-between h-11 text-13px border-b border-ocean">
 
       <div class="flex">
-        <NuxtLink id="nav-logo" to="/" class="text-menu-text font-fira_retina px-6 h-full flex items-center border-r border-ocean">
-          {{ config.dev.logo_name }}
+        <NuxtLink id="nav-logo" to="/"
+                  class="text-menu-text font-fira_retina px-6 h-full flex items-center border-r border-ocean">
+          {{ config.logo_name }}
         </NuxtLink>
 
         <NuxtLink id="nav-link" to="/" :class="navLinkClass('/')">
@@ -28,10 +29,11 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from 'vue';
-const config = useRuntimeConfig();
-
-const isActive = (route: any) => route === config.dev.logo_name;
+import { computed } from 'vue';
+// const config = useRuntimeConfig();
+const  runtimeConfig  = useRuntimeConfig();
+const config = runtimeConfig.public.config;
+const isActive = (route: any) => route === config.logo_name;
 const navLinkClass = computed(() => (route: string) => ({
   'text-menu-text font-fira_retina px-6 h-full flex items-center border-ocean': true,
   'border-r': route !== '/contact-me',

@@ -75,7 +75,9 @@ export default {
         };
     },
     setup() {
-        const contact = useRuntimeConfig().dev.contacts;
+        const  runtimeConfig  = useRuntimeConfig();
+        const config = runtimeConfig.public.config;
+        const contact = config.contacts;
 
         return {
             contact

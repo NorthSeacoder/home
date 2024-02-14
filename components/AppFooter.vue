@@ -25,8 +25,12 @@
         </NuxtLink>
 
     </footer>
-    <a class="absolute bottom-2 text-menu-text w-full text-xs text-center" href="https://beian.miit.gov.cn/"
-       target="_blank">京ICP备2024042617号-1</a>
+    <div class="absolute bottom-2 text-menu-text w-full text-xs leading-3 flex items-center justify-center">
+        <img src="/images/gongan.png" alt="" class=" inline-block w-3 h-3">
+        <a class="  ml-1" href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054628" rel="noreferrer"
+           target="_blank">京公网安备11010502054628</a>
+        <a class=" ml-2" href="https://beian.miit.gov.cn/" target="_blank">京ICP备2024042617号-1</a>
+    </div>
 </template>
 
 <script lang="ts">
@@ -35,8 +39,9 @@ import { defineComponent, reactive, onMounted } from 'vue';
 export default defineComponent({
     name: 'AppFooter',
     setup() {
-        const config = useRuntimeConfig();
-        const social = reactive(config.dev.contacts.social); // Replace with your social links data
+        const runtimeConfig = useRuntimeConfig();
+        const config = runtimeConfig.public.config;
+        const social = reactive(config.contacts.social); // Replace with your social links data
 
         onMounted(() => {
             // Any onMounted logic here
@@ -104,4 +109,5 @@ footer>a>img {
         height: 1.5rem;
         /* 20px */
     }
-}</style>
+}
+</style>
