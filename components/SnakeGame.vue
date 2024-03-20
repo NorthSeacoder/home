@@ -11,7 +11,7 @@
       <!-- Game Screen -->
       <div id="game-screen" ref="gameScreen"></div>
 
-      <button id="start-button" class="font-fira_retina" @click="startGame">start-game</button>
+      <button id="start-button" class="font-fira_retina" v-umami="{name: 'start-game'}" @click="startGame">start-game</button>
 
       <!-- Game Over -->
       <div id="game-over" class="hidden">

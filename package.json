@@ -26,7 +26,8 @@
         "@highlightjs/vue-plugin": "highlightjs/vue-plugin",
         "@nuxtjs/tailwindcss": "^6.11.0",
         "aos": "^3.0.0-beta.6",
-        "highlight.js": "^11.7.0"
+        "highlight.js": "^11.7.0",
+        "nuxt-umami": "^2.6.0"
     },
     "config": {
         "commitizen": {

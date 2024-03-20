@@ -78,5 +78,7 @@ export default defineNuxtConfig({
       apiBase: '/api',
       config
     },
-  }
+  },
+  
+  extends: ['nuxt-umami']
 })

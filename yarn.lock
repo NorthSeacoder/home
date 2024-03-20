@@ -1770,6 +1770,11 @@ add-stream@^1.0.0:
   resolved "https://registry.npmjs.org/add-stream/-/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
   integrity sha512-qQLMr+8o0WC4FZGQTcJiKBVC59JylcPSrTtk6usvmIDFUOCKegapy1VHQwRbFMOFyb/inzUVqHs+eMYKDM1YeQ==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmmirror.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
@@ -5302,6 +5307,11 @@ nuxi@^3.10.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
+nuxt-umami@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npmmirror.com/nuxt-umami/-/nuxt-umami-2.6.0.tgz#5e90e165b6856544d3a8da404030314140a944fc"
+  integrity sha512-Q7MHWOCGCb3OGivTMXwxW9dNzCEyKFjmoW2RS0oFjlD9vfAOS4W/gjkfaE9ckNDxCniD3HzlxtqVo3cfRw+/4w==
+
 nuxt@^3.9.3:
   version "3.9.3"
   resolved "https://registry.npmmirror.com/nuxt/-/nuxt-3.9.3.tgz#02b49790c81849112fe8337c47ca6d1842397656"
@@ -5735,6 +5745,11 @@ pkg-types@^1.0.3:
     jsonc-parser "^3.2.0"
     mlly "^1.2.0"
     pathe "^1.1.0"
+
+pnpm@^8.15.5:
+  version "8.15.5"
+  resolved "https://registry.npmmirror.com/pnpm/-/pnpm-8.15.5.tgz#a58c038faac410c947dbdb93eb30994037d0fce2"
+  integrity sha512-sFGjLH5pWDO4SSbTspuMylclS1ifBknYmcbp0O22cLkex+KkNFm65zdZu1zmGcMmbxFr+THOItHvF1mn5Fqpbw==
 
 portfinder@^1.0.26:
   version "1.0.32"
